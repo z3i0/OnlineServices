@@ -36,8 +36,8 @@ const toggleMobileMenu = () => {
     :class="[
       'fixed top-0 w-full z-50 transition-all duration-300',
       isScrolled 
-        ? 'bg-white/80 backdrop-blur-lg shadow-lg border-b border-gray-800/50' 
-        : 'bg-white/60 backdrop-blur-sm border-b border-gray-400/50'
+        ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg shadow-lg border-b border-gray-800/50' 
+        : 'bg-white/60 dark:bg-gray-900/60 backdrop-blur-sm border-b border-gray-400/50'
     ]"
   >
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -47,11 +47,11 @@ const toggleMobileMenu = () => {
         <div class="flex items-center gap-3 group">
           <a href="/" class="flex items-center gap-3 transition-transform duration-300 hover:scale-105">
             <div class="relative">
-              <div class="absolute inset-0  rounded-xl opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"></div>
+              <div class="absolute inset-0 opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"></div>
               <img
                 src="../../assets/logo.png"
                 alt="Conri Coding Logo"
-                class="relative aspect-square size-10 lg:size-12 rounded-xl object-cover ring-2 ring-gray-200 group-hover:ring-blue-400 transition-all duration-300"
+                class="relative aspect-square size-10 lg:size-12 rounded-xl object-cover transition-all duration-300"
               />
             </div>
             <span class="text-xl lg:text-2xl font-bold">
@@ -69,7 +69,7 @@ const toggleMobileMenu = () => {
           >
             <Button 
               variant="ghost" 
-              class="relative font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200"
+              class="relative font-medium transition-colors duration-200"
             >
               {{ item.label }}
             </Button>
