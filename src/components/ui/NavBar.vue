@@ -37,7 +37,7 @@ const toggleMobileMenu = () => {
       'fixed top-0 w-full z-50 transition-all duration-300',
       isScrolled 
         ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg shadow-lg border-b border-gray-800/50' 
-        : 'bg-white/60 dark:bg-gray-900/60 backdrop-blur-sm border-b border-gray-400/50'
+        : ''
     ]"
   >
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
