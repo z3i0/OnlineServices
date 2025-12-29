@@ -1,17 +1,16 @@
 <script setup lang='ts'>
 import NavBar from "./ui/NavBar.vue"
 import Footer from "./ui/Footer.vue"
+import Hero from "./ui/Hero.vue"
 defineProps<{
   msg: string
 }>()
 </script>
 
 <template>
-  <NavBar />
-  <main class="flex justify-center p-10">
-    <p class="text-3xl font-bold underline">
-      {{ msg }}
-    </p>
+  <main >
+    <NavBar />
+    <Hero />
   </main>
   <Footer />
 </template>
