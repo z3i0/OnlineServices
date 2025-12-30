@@ -15,18 +15,10 @@ const handleLearnMore = () => {
 </script>
 <template>
   <div>
-    <!-- Animated background elements -->
-    <div class="absolute inset-0 overflow-hidden pointer-events-none">
-      <div class="absolute w-96 h-96 rounded-full blur-3xl -top-48 -left-48 animate-pulse bg-primary/8"></div>
-      <div class="absolute w-125 h-125 rounded-full blur-3xl top-1/4 right-0 animate-pulse bg-secondary/5 delay-1000"></div>
-      <div class="absolute w-100 h-100 rounded-full blur-3xl -bottom-32 left-1/3 animate-pulse bg-accent/5 delay-2000"></div>
-    </div>
-
     <!-- Main Content Container -->
     <div class="min-h-screen relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
       <div class="flex items-center">
         <div class="grid lg:grid-cols-2 gap-16 items-center w-full py-12">
-          
           <!-- Left Content Section -->
           <div class="space-y-10 max-w-2xl">
             <!-- Badge -->
@@ -166,7 +158,7 @@ const handleLearnMore = () => {
     </div>
 
     <!-- Bottom gradient line -->
-    <div class="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-primary/50 to-transparent"></div>
+    <!-- <div class="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-primary/50 to-transparent"></div> -->
   </div>
 </template>
 
