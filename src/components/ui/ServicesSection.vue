@@ -1,6 +1,6 @@
 <template>
-  <section class="py-20">
-    <div class="container mx-auto max-w-6xl px-4">
+  <section>
+    <div class="container mx-auto max-w-7xl">
       
       <!-- Section Header -->
       <div class="text-center mb-16 space-y-4">
