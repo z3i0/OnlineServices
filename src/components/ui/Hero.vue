@@ -31,7 +31,7 @@ const handleLearnMore = () => {
             <div class="space-y-6">
               <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight text-foreground">
                 Transforming Data
-                into 
+                into
                 <span class="relative inline-block">
                   <span class="relative z-10 text-primary">
                     Decisions
@@ -39,26 +39,25 @@ const handleLearnMore = () => {
                   <span class="absolute inset-0 bg-primary/10 rounded-xl transform -rotate-1"></span>
                 </span>
               </h1>
-              
+
               <p class="text-lg sm:text-xl leading-relaxed max-w-xl text-muted-foreground">
-                Leverage the power of machine learning and AI to unlock insights and drive business growth with cutting-edge technology
+                Leverage the power of machine learning and AI to unlock insights and drive business growth with
+                cutting-edge technology
               </p>
             </div>
 
             <!-- CTA Section -->
             <div class="flex flex-col sm:flex-row gap-4">
-              <Button 
-                class="group px-8 py-6 text-base font-semibold rounded-xl bg-primary text-primary-foreground shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-                @click="handleBookMeeting"
-              >
+              <Button
+                class="group px-8 py-6 text-base font-semibold rounded-full bg-primary text-primary-foreground shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all duration-300 hover:scale-105"
+                @click="handleBookMeeting">
                 Get Started
                 <ArrowRight class="w-5 h-5 transition-transform group-hover:translate-x-1" />
               </Button>
-              
-              <Button 
-                class="px-8 py-6 text-base font-semibold rounded-xl border-2 border-primary/30 text-primary bg-transparent transition-all duration-300 hover:scale-105 hover:bg-primary/5"
-                @click="handleLearnMore"
-              >
+
+              <Button
+                class="px-8 py-6 text-base font-semibold rounded-full border border-primary/20 text-foreground bg-background hover:bg-primary/5 hover:border-primary/50 transition-all duration-300 hover:scale-105"
+                variant="outline" @click="handleLearnMore">
                 Learn More
               </Button>
             </div>
@@ -66,22 +65,20 @@ const handleLearnMore = () => {
             <!-- Social Proof -->
             <div class="flex flex-wrap items-center gap-6 pt-4">
               <div class="flex -space-x-3">
-                <Avatar 
-                  v-for="seed in ['Felix', 'Aneka', 'Sarah', 'Bob']" 
-                  :key="seed"
-                  class="w-12 h-12 ring-4 ring-background border-2 border-border"
-                >
+                <Avatar v-for="seed in ['Felix', 'Aneka', 'Sarah', 'Bob']" :key="seed"
+                  class="w-12 h-12 ring-4 ring-background border-2 border-border">
                   <AvatarImage :src="`https://api.dicebear.com/7.x/avataaars/svg?seed=${seed}`" />
                   <AvatarFallback class="bg-primary/10 text-primary font-semibold">
                     {{ seed[0] }}
                   </AvatarFallback>
                 </Avatar>
               </div>
-              
+
               <div class="flex flex-col">
                 <div class="flex items-center gap-1">
                   <svg v-for="i in 5" :key="i" class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                   </svg>
                 </div>
                 <p class="text-sm font-medium text-muted-foreground">
@@ -133,22 +130,23 @@ const handleLearnMore = () => {
             </div> -->
 
             <!-- Main illustration container -->
-            <div class="hidden sm:block relative rounded-3xl p-12 backdrop-blur-sm border border-border bg-gradient-to-br from-primary/[0.03] to-secondary/[0.03]">
+            <div
+              class="hidden sm:block relative rounded-3xl p-12 backdrop-blur-sm border border-border bg-gradient-to-br from-primary/[0.03] to-secondary/[0.03]">
               <!-- Glow effect -->
-              <div class="absolute inset-0 rounded-3xl blur-3xl -z-10 bg-gradient-to-br from-primary/15 to-secondary/15"></div>
-              
+              <div
+                class="absolute inset-0 rounded-3xl blur-3xl -z-10 bg-gradient-to-br from-primary/15 to-secondary/15">
+              </div>
+
               <!-- Image container -->
               <div class="relative">
-                <img 
-                  src="../../assets/logo.png" 
-                  alt="Logo" 
-                  class="w-full h-auto drop-shadow-2xl animate-float-slow"
-                />
+                <img src="../../assets/logo.png" alt="Logo" class="w-full h-auto drop-shadow-2xl animate-float-slow" />
 
                 <!-- Orbital rings -->
                 <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
                   <div class="absolute w-full h-full border border-primary/10 rounded-full animate-spin-slow"></div>
-                  <div class="absolute w-[90%] h-[90%] border border-secondary/10 rounded-full animate-spin-slow-reverse"></div>
+                  <div
+                    class="absolute w-[90%] h-[90%] border border-secondary/10 rounded-full animate-spin-slow-reverse">
+                  </div>
                 </div>
               </div>
             </div>
@@ -164,18 +162,24 @@ const handleLearnMore = () => {
 
 <style scoped>
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0px);
   }
+
   50% {
     transform: translateY(-20px);
   }
 }
 
 @keyframes float-slow {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0px) rotate(0deg);
   }
+
   50% {
     transform: translateY(-10px) rotate(2deg);
   }
@@ -186,13 +190,16 @@ const handleLearnMore = () => {
     transform: translateY(0px) translateX(0px) scale(0);
     opacity: 0;
   }
+
   20% {
     opacity: 0.6;
     transform: scale(1);
   }
+
   80% {
     opacity: 0.4;
   }
+
   100% {
     transform: translateY(-120px) translateX(30px) scale(0);
     opacity: 0;
@@ -203,6 +210,7 @@ const handleLearnMore = () => {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -212,6 +220,7 @@ const handleLearnMore = () => {
   from {
     transform: rotate(360deg);
   }
+
   to {
     transform: rotate(0deg);
   }
