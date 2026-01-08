@@ -32,45 +32,36 @@ const toggleMobileMenu = () => {
 </script>
 
 <template>
-  <nav 
-    :class="[
-      'fixed top-0 w-full z-50 transition-all duration-300',
-      isScrolled 
-        ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg shadow-lg border-b border-gray-800/50' 
-        : ''
-    ]"
-  >
+  <nav :class="[
+    'fixed top-0 w-full z-50 transition-all duration-300',
+    isScrolled
+      ? 'bg-background/80 backdrop-blur-lg shadow-sm border-b border-border'
+      : 'bg-transparent'
+  ]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16 lg:h-20">
-        
+
         <!-- Logo Section -->
         <div class="flex items-center gap-3 group">
           <a href="/" class="flex items-center gap-3 transition-transform duration-300 hover:scale-105">
             <div class="relative">
-              <div class="absolute inset-0 opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"></div>
-              <img
-                src="../../assets/logo.png"
-                alt="Conri Coding Logo"
-                class="relative aspect-square size-10 lg:size-12 rounded-xl object-cover transition-all duration-300"
-              />
+              <div
+                class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300 rounded-full">
+              </div>
+              <img src="../../assets/logo.png" alt="Conri Coding Logo"
+                class="relative aspect-square size-10 lg:size-12 rounded-xl object-cover transition-all duration-300" />
             </div>
-            <span class="text-xl lg:text-2xl font-bold">
+            <span class="text-xl lg:text-2xl font-bold text-foreground">
               Conri Coding
             </span>
           </a>
         </div>
 
         <!-- Desktop Navigation -->
-        <div class="hidden lg:flex items-center gap-4">
-          <a 
-            v-for="item in navItems" 
-            :key="item.label"
-            :href="item.href"
-          >
-            <Button 
-              variant="ghost" 
-              class="relative font-medium transition-colors duration-200"
-            >
+        <div class="hidden lg:flex items-center gap-1">
+          <a v-for="item in navItems" :key="item.label" :href="item.href">
+            <Button variant="ghost"
+              class="relative font-medium transition-colors duration-200 text-muted-foreground hover:text-foreground hover:bg-muted/50 rounded-full px-4">
               {{ item.label }}
             </Button>
           </a>
@@ -78,19 +69,17 @@ const toggleMobileMenu = () => {
 
         <!-- CTA Button (Desktop) -->
         <div class="hidden lg:flex items-center">
-          <Button 
-          >
+          <Button
+            class="rounded-full px-6 shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all hover:-translate-y-0.5">
             <span class="relative z-10">Contact Us</span>
           </Button>
         </div>
 
         <!-- Mobile Menu Button -->
         <div class="flex lg:hidden">
-          <button
-            @click="toggleMobileMenu"
-            class="p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors duration-200"
-            aria-label="Toggle menu"
-          >
+          <button @click="toggleMobileMenu"
+            class="p-2 rounded-lg text-foreground hover:bg-muted transition-colors duration-200"
+            aria-label="Toggle menu">
             <Menu v-if="!isMobileMenuOpen" class="h-6 w-6" />
             <X v-else class="h-6 w-6" />
           </button>
@@ -99,35 +88,19 @@ const toggleMobileMenu = () => {
     </div>
 
     <!-- Mobile Menu -->
-    <transition
-      enter-active-class="transition duration-200 ease-out"
-      enter-from-class="opacity-0 -translate-y-2"
-      enter-to-class="opacity-100 translate-y-0"
-      leave-active-class="transition duration-150 ease-in"
-      leave-from-class="opacity-100 translate-y-0"
-      leave-to-class="opacity-0 -translate-y-2"
-    >
-      <div 
-        v-if="isMobileMenuOpen"
-        class="lg:hidden border-t border-gray-200/50 bg-white/95 backdrop-blur-lg"
-      >
+    <transition enter-active-class="transition duration-200 ease-out" enter-from-class="opacity-0 -translate-y-2"
+      enter-to-class="opacity-100 translate-y-0" leave-active-class="transition duration-150 ease-in"
+      leave-from-class="opacity-100 translate-y-0" leave-to-class="opacity-0 -translate-y-2">
+      <div v-if="isMobileMenuOpen" class="lg:hidden border-t border-border bg-background/95 backdrop-blur-lg">
         <div class="px-4 py-6 space-y-3">
-          <a 
-            v-for="item in navItems" 
-            :key="item.label"
-            :href="item.href"
-            @click="toggleMobileMenu"
-            class="block"
-          >
-            <Button 
-              variant="ghost" 
-              class="w-full justify-start text-left font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 py-3 transition-all duration-200"
-            >
+          <a v-for="item in navItems" :key="item.label" :href="item.href" @click="toggleMobileMenu" class="block">
+            <Button variant="ghost"
+              class="w-full justify-start text-left font-medium text-muted-foreground hover:text-foreground hover:bg-muted py-3 transition-all duration-200 rounded-xl">
               {{ item.label }}
             </Button>
           </a>
-          <div class="pt-4 border-t border-gray-200">
-            <Button>
+          <div class="pt-4 border-t border-border">
+            <Button class="w-full rounded-full shadow-lg shadow-primary/20">
               Contact Us
             </Button>
           </div>
