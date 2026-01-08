@@ -89,46 +89,7 @@ const handleLearnMore = () => {
           </div>
 
           <!-- Right Content - Illustration -->
-          <div class="relative lg:scale-110">
-            <!-- Floating card decorations -->
-            <!-- <div class="absolute -top-8 -left-8 p-4 rounded-2xl shadow-2xl animate-float bg-card border border-border">
-              <div class="flex items-center gap-3">
-                <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-secondary/15">
-                  <svg class="w-6 h-6 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                          d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
-                  </svg>
-                </div>
-                <div>
-                  <p class="text-xs font-semibold text-muted-foreground">Analytics</p>
-                  <p class="text-lg font-bold text-foreground">+24.5%</p>
-                </div>
-              </div>
-            </div> -->
-
-            <!-- <div class="absolute -bottom-8 -right-8 p-4 rounded-2xl shadow-2xl animate-float delay-1500 bg-card border border-border">
-              <div class="flex items-center gap-3">
-                <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-accent/15">
-                  <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                          d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                  </svg>
-                </div>
-                <div>
-                  <p class="text-xs font-semibold text-muted-foreground">Performance</p>
-                  <p class="text-lg font-bold text-foreground">Fast</p>
-                </div>
-              </div>
-            </div> -->
-
-            <!-- <div class="absolute top-1/2 -left-12 p-3 rounded-xl shadow-xl animate-float delay-500 bg-card border border-border">
-              <div class="w-10 h-10 rounded-lg flex items-center justify-center bg-primary/15">
-                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
-                </svg>
-              </div>
-            </div> -->
-
+          <div class="relative lg:scale-100">
             <!-- Main illustration container -->
             <div
               class="hidden sm:block relative rounded-3xl p-12 backdrop-blur-sm border border-border bg-gradient-to-br from-primary/[0.03] to-secondary/[0.03]">
