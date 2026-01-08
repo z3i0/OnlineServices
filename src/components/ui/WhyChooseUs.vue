@@ -29,24 +29,26 @@ const features = [
 <template>
     <section class="py-24 relative overflow-hidden">
         <!-- Background Elements -->
-        <div class="absolute inset-0 bg-primary/5 -z-10"></div>
-        <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent">
+        <div class="absolute inset-0 -z-10"></div>
+        <div class="absolute top-0 left-0 w-full h-px">
         </div>
-        <div
-            class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent">
+        <div class="absolute bottom-0 left-0 w-full h-px">
         </div>
 
         <div class="container mx-auto max-w-7xl px-4 md:px-6">
 
             <!-- Section Header -->
-            <div class="text-center mb-16 space-y-4">
-                <div class="inline-block px-4 py-1.5 bg-primary/10 rounded-full mb-4">
-                    <span class="text-sm font-medium text-primary">Why Choose Us</span>
+            <div class="text-center mb-16 space-y-6">
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-4 border border-primary/20">
+                    <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                    <span class="text-sm font-semibold text-primary tracking-wide">Why Choose Us</span>
                 </div>
-                <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-foreground">
-                    Built for your Success
+                <h2 class="text-4xl md:text-5xl font-black tracking-tight text-foreground leading-tight">
+                    Built for your <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Success</span>
                 </h2>
-                <p class="text-muted-foreground max-w-2xl mx-auto text-lg">
+                <p class="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
                     We combine technical expertise with business acumen to deliver exceptional value.
                 </p>
             </div>
@@ -54,7 +56,7 @@ const features = [
             <!-- Features Grid -->
             <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
                 <Card v-for="(feature, index) in features" :key="index"
-                    class="group relative overflow-hidden border-primary/10 bg-background/50 backdrop-blur-sm transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:border-primary/30">
+                    class="group relative overflow-hidden border-primary/10 bg-card/40 backdrop-blur-sm transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-1 hover:border-primary/30">
 
                     <!-- Gradient Hover Effect -->
                     <div
